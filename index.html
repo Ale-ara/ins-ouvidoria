@@ -96,35 +96,44 @@
     
     </style>
 <style>
-    body {
+body {
     font-family: 'Segoe UI', sans-serif;
     background: url(https://2img.net/i.imgur.com/JiBKUn7.jpeg) no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
-    position: relative; /* necessário para overlay absoluto */
+    position: relative; /* necessário para overlay */
 }
 
-/* Overlay azul animado, atrás do conteúdo, mas não do footer */
+/* Overlay azul animado */
 body::after {
     content: "";
-    position: fixed; /* cobre a tela inteira */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* permite clicar normalmente */
-    background: rgba(0, 40, 130, 0.2); /* cor inicial */
+    pointer-events: none;
+    background: rgba(0, 40, 130, 0.2);
     animation: azulPulse 7s ease-in-out infinite alternate;
-    z-index: 0; /* atrás do conteúdo */
+    z-index: 0;
 }
 
-/* Faz a animação do azul escurecendo e clareando */
+/* Animação */
 @keyframes azulPulse {
     0% { background: rgba(0, 40, 130, 0.2); }
     50% { background: rgba(0, 40, 130, 0.45); }
     100% { background: rgba(0, 40, 130, 0.2); }
 }
+
+/* ✅ DESATIVA ANIMAÇÃO NO CELULAR */
+@media (max-width: 600px) {
+    body::after {
+        animation: none !important;
+        background: rgba(0, 40, 130, 0.25); /* fixa um tom bonito */
+    }
+}
+
 
 /* Conteúdo principal acima do overlay */
 #main-content {
