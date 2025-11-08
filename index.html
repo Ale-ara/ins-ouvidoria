@@ -1,0 +1,1304 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>[INS] Ouvidoria</title>
+<link rel="icon"
+    href="https://2img.net/i.imgur.com/hKlxniK.png" />
+<link rel="stylesheet" href="css.css" />
+<meta name="viewport" content="width=device-width, initial-scales=1.0" />
+<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+<link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+    rel="stylesheet" />
+<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+<link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet" />
+<link href="https://kit-pro.fontawesome.com/releases/v6.1.1/css/pro.min.css" rel="stylesheet" />
+<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+    
+        
+    
+        .main_tittle .tittle_description {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+    
+        .card {
+    position: relative;
+    background-color: #f9fcff;
+    padding: 25px;
+    border-radius: 14px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Borda animada */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #004688, #57a0ff, #004688, #00529e, #cce4f7);
+    background-size: 400% 400%;
+    animation: borderAnimation 6s ease infinite;
+    z-index: -1;
+}
+
+/* Máscara da borda para manter o centro branco */
+.card::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #f9fcff;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+@keyframes borderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+    
+        .title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #003366;
+        }
+    
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    
+    </style>
+<style>
+    body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url(https://2img.net/i.imgur.com/JiBKUn7.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    position: relative; /* necessário para overlay absoluto */
+}
+
+/* Overlay azul animado, atrás do conteúdo, mas não do footer */
+body::after {
+    content: "";
+    position: fixed; /* cobre a tela inteira */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* permite clicar normalmente */
+    background: rgba(0, 40, 130, 0.2); /* cor inicial */
+    animation: azulPulse 7s ease-in-out infinite alternate;
+    z-index: 0; /* atrás do conteúdo */
+}
+
+/* Faz a animação do azul escurecendo e clareando */
+@keyframes azulPulse {
+    0% { background: rgba(0, 40, 130, 0.2); }
+    50% { background: rgba(0, 40, 130, 0.45); }
+    100% { background: rgba(0, 40, 130, 0.2); }
+}
+
+/* Conteúdo principal acima do overlay */
+#main-content {
+    position: relative;
+    z-index: 1; /* garante que fique acima do overlay */
+}
+
+
+    .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #004688;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+    .main_tittle .tittle_description {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .card {
+        background-color: #004688;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid #cce4f7;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #003366;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+/* 🔽 DROPDOWN CUSTOMIZADO */
+.dropdown {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#dropdownBtn {
+  width: 100%;
+  background: rgba(255,255,255,0.12);
+  color: #057ee8;
+  font-weight: 600;
+  border: 1px solid #057ee8 !important;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+#dropdownBtn:hover {
+  background: rgba(255,255,255,0.18);
+  transform: scale(1.02);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 22, 45, 0.95);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 6px 0;
+
+  /* lista scrollável */
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* Estilo dos itens */
+.dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #dee7ff;
+  transition: 0.25s;
+}
+
+.dropdown-item i {
+  color: #4aa3ff;
+}
+
+.dropdown-item:hover {
+  background: rgba(50, 115, 255, 0.25);
+  color: #fff;
+}
+
+/* Quando abrir */
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+
+   .input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0f1b2b;
+    font-size: 0.95rem;
+    letter-spacing: 0.2px;
+}
+
+/* Estilo moderno */
+.input-box input,
+.input-box textarea {
+    padding: 14px;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(6px);
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    color: #0c1a2d;
+}
+
+/* Placeholder moderno */
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #7d8ca0;
+    opacity: 0.8;
+}
+
+/* Foco iluminado */
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #4a90e2;
+    background: rgba(230, 240, 255, 0.8);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.4);
+    outline: none;
+}
+
+/* Efeito quando passa o mouse */
+.input-box input:hover,
+.input-box textarea:hover {
+    border-color: #b5cff0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+
+    .button input[type="submit"] {
+        background-color: #00529e;
+        color: white;
+        padding: 16px 28px;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.1em;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    .button input[type="submit"]:hover {
+        background-color: #003f73;
+        color: white;
+    }
+
+    .bbcode-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .bbcode-toolbar button {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        background-color: #e6f0fa;
+        color: #003366;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .bbcode-toolbar button:hover {
+        background-color: #d1e7ff;
+    }
+
+    .footer {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+.footer strong {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer p:first-child {
+    margin-top: 0;
+}
+
+
+    .slide-info {
+        font-size: 1.1em;
+        color: #003366;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .emblema-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .emblema-container img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    resize: vertical;
+    height: 50px; /* Faz com que a altura se ajuste automaticamente conforme o conteúdo */
+}
+
+.personagem {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 30px;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.personagem-img {
+  width: 90px;
+  height: auto;
+}
+
+@keyframes aparecerSuave {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar-aparecer {
+  animation: aparecerSuave 0.6s ease-out forwards;
+}
+
+.balao-fala {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #24473c;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.3em;
+  max-width: 220px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.balao-fala::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.85) transparent transparent transparent;
+}
+
+/* ✅ === MEDIA QUERIES === */
+
+/* 📱 Telas pequenas (smartphones) */
+@media (max-width: 480px) {
+  .personagem {
+    left: 10px;
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .personagem-img {
+    width: 60px;
+  }
+
+  .balao-fala {
+    font-size: 12px;
+    padding: 10px 12px;
+    max-width: 180px;
+  }
+
+  .balao-fala::before {
+    bottom: -8px;
+    border-width: 8px 8px 0 8px;
+  }
+}
+
+/* 📱📲 Telas médias (celulares grandes / tablets pequenos) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .personagem {
+    left: 20px;
+    bottom: 15px;
+  }
+
+  .personagem-img {
+    width: 75px;
+  }
+
+  .balao-fala {
+    font-size: 13px;
+    max-width: 200px;
+  }
+}
+
+/* 💻 Telas grandes (notebooks e desktops maiores) */
+@media (min-width: 1200px) {
+  .personagem {
+    left: 40px;
+    bottom: 0px;
+  }
+
+  .personagem-img {
+    width: 100px;
+  }
+
+  .balao-fala {
+    font-size: 15px;
+    max-width: 250px;
+  }
+}
+
+
+.dropdown-content {
+  z-index: 99999 !important;
+}
+.dropdown {
+  position: relative;
+  z-index: 9999;
+}
+
+/* POP-UP MODERNO ESTILIZADO */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 22, 45, 0.75); /* fundo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popup-content {
+  background: rgba(20, 30, 60, 0.95); /* glass */
+  padding: 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  min-width: 350px;
+  max-width: 450px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: slideUp 0.3s ease-out;
+}
+
+.popup-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #57a0ff;
+}
+
+.popup-content input {
+  width: 90%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 20px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.popup-content input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.popup-content input:focus {
+  border-color: #57a0ff;
+  box-shadow: 0 0 10px rgba(87,160,255,0.5);
+  background: rgba(255,255,255,0.1);
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.popup-buttons button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+#spoilerOk {
+  background: #057ee8;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(5,126,232,0.5);
+}
+
+#spoilerOk:hover {
+  background: #0059a7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(5,126,232,0.6);
+}
+
+#spoilerCancel {
+  background: #444c5c;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#spoilerCancel:hover {
+  background: #2e3345;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+.popup-top-img {
+  width: 80px;
+  height: auto;
+  margin: 0 auto 15px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.input-box textarea {
+    overflow-y: auto; /* ou hidden se quiser remover total */
+}
+
+/* Para remover a barra nos navegadores modernos */
+.input-box textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Firefox */
+.input-box textarea {
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #00407c;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #005eb6;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00529e;
+    }
+
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: #00529e #00407c;
+    }
+
+/* LUA */
+.lua-magica {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff 40%, #c9ddff 70%, #8fb4ff 100%);
+    border: 4px solid rgba(130,160,255,0.8);
+    box-shadow: 0 0 40px rgba(130,160,255,0.9),
+                0 0 80px rgba(130,160,255,0.7),
+                0 0 160px rgba(100,140,255,0.5);
+    z-index: 2; 
+    position: fixed; /* Fixa na tela */
+    top: 20px;       /* distância do topo da tela */
+    left: 1350px;    /* distância da esquerda da tela */
+}
+
+/* Se quiser manter a chama como efeito estático atrás da lua, sem animação */
+.chama {
+    position: absolute; 
+    bottom: -20px;        
+    width: 60px;
+    height: 100px;
+    background: radial-gradient(circle,
+        rgba(0,140,255,0.8) 0%,
+        rgba(0,70,255,0.7) 40%,
+        rgba(0,30,120,0.4) 70%,
+        transparent 100%
+    );
+    filter: blur(6px);
+    opacity: 0.9;
+    z-index: 1; /* atrás da lua */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Remove animação e ::before completamente */
+
+
+
+
+</style>   
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><div class="text_content" id="text_content">
+
+<div class="lua-magica">
+    
+</div>
+
+
+
+
+<!-- Personagem da segunda página: Lynsk -->
+<div class="personagem" id="personagemLynsk">
+  <img src="https://i.imgur.com/OwK346j.png" alt="Líder Habbo" class="personagem-img">
+  <div class="balao-fala" id="falaBalao">
+  Olá, eu sou a líder <b>Lynsk</b>!<br>
+  Sua voz também faz parte da construção dos <b>INS</b>!<br>
+  Envie agora seu projeto ou sugestão na ouvidoria!</b>
+</div>
+
+
+
+</div>
+    <div class="container">
+        
+
+        <div class="main_tittle">
+
+            <div class="card" id="form1_form" style="display: block;">
+
+                <div class="emblema-container">
+                    <img alt="Emblema"
+                        src="https://www.habbo.com.br/habbo-imaging/badge/b09064s43131s50134s17113s171153f3edc7f555be912c2392e285b05bd34.gif" />
+                </div>
+            
+                <div class="slide-info">
+                    [INS] Ouvidoria
+                </div>
+                <form onsubmit=" return fill_teste(event)" action="#" class="form1_form" id="myForm">
+
+                    <div class="dropdown">
+  <input type="hidden" id="tipoRequerimento" name="tipoRequerimento" required>
+
+  <button id="dropdownBtn">
+    <span><i class="fa-solid fa-envelope"></i> Selecione a proposta desejada</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </button>
+
+  <div class="dropdown-content" id="dropdownMenu">
+
+    <div class="dropdown-item" data-value="projeto">
+      <i class="fa-solid fa-circle-info"></i> Projeto
+    </div>
+
+    <div class="dropdown-item" data-value="sugestao">
+      <i class="fa-solid fa-circle-info"></i> Sugestão
+    </div>
+
+    <div class="dropdown-item" data-value="correcao">
+      <i class="fa-solid fa-circle-info"></i> Correção/Alteração
+    </div>
+
+  </div>
+</div>
+
+                        <div class="input-box">
+                            <label class="details_span">Autor:</label> <input id="author" type="text"
+                                placeholder="Autor da proposta..." name="author" required="" />
+                        </div>
+
+                         <div class="input-box">
+                            <label class="details_span">Tema da proposta:</label> <textarea id="tema" type="text"
+                                placeholder="Tema da proposta..." rows="4" cols="50" name="tema" required=""></textarea>
+                        </div>
+
+                        <div class="input-box">
+                            <label class="details_span">Número de ordem:</label> <input id="order" type="number"
+                                placeholder="Número de ordem da proposta..." name="order" required="" />
+                        </div>
+
+                        <div class="input-box">
+                            <label class="details_span">Descrição da proposta:</label>
+                            <div class="bbcode-toolbar">
+
+                                <!--   Formatação de texto   -->
+                                <button type="button" onclick="wrapText('b')" title="Negrito">
+                                    <span class="material-icons">
+                                        format_bold
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="wrapText('i')" title="Itálico">
+                                    <span class="material-icons">
+                                        format_italic
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="wrapText('u')" title="Sublinhado">
+                                    <span class="material-icons">
+                                        format_underlined
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="wrapText('strike')" title="Riscado">
+                                    <span class="material-icons">
+                                        strikethrough_s
+                                        </span>
+                                </button>
+
+                                <!--   Alinhamento   -->
+                                <button type="button" onclick="wrapText('left')" title="Alinhar à Esquerda">
+                                    <span class="material-icons">
+                                        format_align_left
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="wrapText('center')" title="Alinhar ao Centro">
+                                    <span class="material-icons">
+                                        format_align_center
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="wrapText('right')" title="Alinhar à Direita">
+                                    <span class="material-icons">
+                                        format_align_right
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="wrapText('justify')" title="Justificar">
+                                    <span class="material-icons">
+                                        format_align_justify
+                                        </span>
+                                </button>
+
+                                <!--   Citação   -->
+                                <button type="button" onclick="insertQuote()" title="Citar">
+                                    <span class="material-icons">
+                                        format_quote
+                                        </span>
+                                </button>
+
+                                <!--   Code   -->
+                                <button type="button" onclick="wrapText('code')" title="Code">
+                                    <span class="material-icons">
+                                        code
+                                        </span>
+                                </button>
+
+                                <!--   Spoiler   -->
+                                <button type="button" onclick="insertSpoiler()" title="Spoiler">
+                                    <span class="material-icons">
+                                        indeterminate_check_box
+                                        </span>
+                                </button>
+
+                                <!--   Escondido   -->
+                                <button type="button" onclick="wrapText('hide')" title="Escondido">
+                                    <span class="material-icons">
+                                        visibility_off
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="insertImage()" title="Inserir Imagem">
+                                    <span class="material-icons">
+                                        image
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="insertLink()" title="Inserir Link">
+                                    <span class="material-icons">
+                                        link
+                                        </span>
+                                </button>
+
+                                <!--   Formatação   -->
+                                <button type="button" onclick="insertHeading()" title="Formato dos Títulos">
+                                    <span class="material-icons">
+                                        title
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="insertFontSize()" title="Tamanho de Fonte">
+                                    <span class="material-icons">
+                                        format_size
+                                        </span>
+                                </button>
+
+                                <button type="button" onclick="selectColor()" title="Cor da Fonte">
+                                    <span class="material-icons">
+                                        palette
+                                        </span>
+                                </button>
+
+                            </div>
+                            <textarea id="description" placeholder="Descrição da sua proposta..." rows="6" cols="50"
+                                name="description" required=""></textarea>
+                        </div>
+
+                        <div class="button">
+                            <input type="submit" value="Enviar" id="submit" />
+                        </div>
+
+                        <div id="enviar_teste_dis" style="display: none;" class="button">
+
+                        </div>
+
+                    </div>
+
+                </form>
+<!-- Pop-up Spoiler -->
+<div id="spoilerPopup" class="popup-overlay" style="display: none;">
+  <div class="popup-content">
+    <!-- Imagem no topo -->
+
+    <h3>Digite o título do Spoiler (Opcional)</h3>
+    <input type="text" id="spoilerTitle" placeholder="Título do spoiler...">
+    <div class="popup-buttons">
+      <button id="spoilerCancel">Cancelar</button>
+      <button id="spoilerOk">Inserir</button>
+    </div>
+  </div>
+</div>
+
+
+            </div>
+
+            <!--   onclick="fill_mp()"   -->
+            <!--   FIM DO FORMULÁRIO   -->
+<script>
+window.onload = () => {
+  const lynsk = document.getElementById('personagemLynsk');
+
+  // Aparece
+  lynsk.style.display = 'flex';
+  lynsk.classList.add('animar-aparecer');
+
+  // Depois de 3 segundos, some
+  setTimeout(() => {
+    lynsk.classList.remove('animar-aparecer');
+    lynsk.classList.add('animar-sumir');
+
+    // Depois da animação, esconde o elemento
+    setTimeout(() => {
+      lynsk.style.display = 'none';
+    }, 600); // tempo da animação sumirSuave
+  }, 3000); // tempo em que fica visível
+};
+
+// Seleciona os elementos
+const dropdown = document.querySelector(".dropdown");
+const dropdownBtn = document.getElementById("dropdownBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+// Abrir ou fechar o menu
+dropdownBtn.addEventListener("click", () => {
+  dropdown.classList.toggle("open");
+});
+
+// Seleção dos itens
+dropdownItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const selectedText = item.textContent.trim();
+    const selectedValue = item.getAttribute("data-value");
+
+    // Atualiza o texto do botão
+    dropdownBtn.querySelector("span").innerHTML = 
+      `<i class="fa-solid fa-envelope"></i> ${selectedText}`;
+
+    // Fecha o menu
+    dropdown.classList.remove("open");
+
+    // (Opcional) você pode guardar o value para usar depois
+    dropdownBtn.dataset.selected = selectedValue;
+  });
+});
+
+// Fecha o dropdown ao clicar fora
+document.addEventListener("click", (e) => {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove("open");
+  }
+});
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  let focusBloqueado = false; // <--- NOVO
+
+  const lynsk = document.getElementById("personagemLynsk");
+  const balao = document.getElementById("falaBalao");
+
+  const falasLynsk = {
+    select_options: "Selecione o tipo da proposta corretamente.",
+    author: "Digite o autor da proposta.",
+    order: "Informe o número de ordem da proposta.",
+    tema: "Descreva o tema principal da proposta.",
+    description: "Agora explique sua proposta de forma detalhada!",
+    submit: "Clique aqui para enviar sua proposta!"
+  };
+
+  const mostrarLynsk = (mensagem) => {
+    if (!mensagem) return;
+    balao.innerHTML = mensagem;
+    lynsk.style.display = "flex";
+
+    clearTimeout(window._lynskTimeout);
+    window._lynskTimeout = setTimeout(() => {
+      lynsk.style.display = "none";
+    }, 4000);
+  };
+
+
+  // ✅ CAMPOS QUE PODEM MOSTRAR A FALA
+  const campos = document.querySelectorAll(
+    "input:not([type='hidden']), select, textarea"
+  );
+
+  campos.forEach(campo => {
+    campo.addEventListener("focus", () => {
+
+      // ✅ SE O FOCO VEIO DA TOOLBAR → NÃO MOSTRAR NADA
+      if (focusBloqueado) {
+        focusBloqueado = false;
+        return;
+      }
+
+      const id = campo.id;
+      if (id && falasLynsk[id]) {
+        mostrarLynsk(falasLynsk[id]);
+      }
+    });
+  });
+
+
+  // ✅ BOTÕES DA TOOLBAR — NÃO PODEM GERAR FALA
+  document.querySelectorAll(".bbcode-toolbar button").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      focusBloqueado = true; // <--- MARCA QUE O FOCO NÃO DEVE GERAR FALA
+
+      document.getElementById("description").focus();
+    });
+  });
+
+});
+</script>
+
+
+
+            <script>
+                function wrapText(tag) {
+                    const textarea = document.getElementById('description');
+                    const start = textarea.selectionStart;
+                    const end = textarea.selectionEnd;
+                    const text = textarea.value;
+
+                    const before = text.substring(0, start);
+                    const selected = text.substring(start, end);
+                    const after = text.substring(end);
+
+                    textarea.value = `${before}[${tag}]${selected}[/${tag}]${after}`;
+                    textarea.focus();
+                }
+
+                function insertQuote() {
+                    const author = prompt("Autor (Opcional):", "");
+                    const textarea = document.getElementById('description');
+                    const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+                    const quoteTag = author ? `[quote="${author}"]${selectedText}[/quote]` : `[quote]${selectedText}[/quote]`;
+                    insertAtCursor(quoteTag);
+                }
+
+              function insertSpoiler() {
+  const textarea = document.getElementById('description');
+  const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+
+  // Abrir pop-up
+  const popup = document.getElementById('spoilerPopup');
+  const input = document.getElementById('spoilerTitle');
+  popup.style.display = 'flex';
+  input.value = ''; // limpa input
+  input.focus();
+
+  // Cancelar
+  document.getElementById('spoilerCancel').onclick = () => {
+    popup.style.display = 'none';
+  };
+
+  // Inserir
+  document.getElementById('spoilerOk').onclick = () => {
+    const title = input.value.trim();
+    const spoilerTag = title ? `[spoiler="${title}"]${selectedText}[/spoiler]` : `[spoiler]${selectedText}[/spoiler]`;
+    insertAtCursor(spoilerTag);
+    popup.style.display = 'none';
+  };
+}
+
+
+                function insertLink() {
+                    const url = prompt("URL:");
+                    const description = prompt("Descrição (Opcional):", "");
+                    const linkTag = description ? `[url=${url}]${description}[/url]` : `[url]${url}[/url]`;
+                    insertAtCursor(linkTag);
+                }
+
+                function insertImage() {
+                    const url = prompt("URL:");
+                    const width = prompt("Largura (Opcional):", "0");
+                    const height = prompt("Altura (Opcional):", "0");
+                    const imageTag = `[img(${width}px,${height}px)]${url}[/img]`;
+                    insertAtCursor(imageTag);
+                }
+
+                function insertHeading() {
+                    const headingLevel = prompt("Escolha o formato do título (h2, h3, h4):", "h2");
+                    const selectedText = getSelectedText();
+                    const headingTag = `[${headingLevel}]${selectedText}[/${headingLevel}]`;
+                    insertAtCursor(headingTag);
+                }
+
+                function insertFontSize() {
+                    const size = prompt("Escolha o tamanho (10, 13, 16, 18, 24):", "13");
+                    const selectedText = getSelectedText();
+                    const sizeTag = `[size=${size}]${selectedText}[/size]`;
+                    insertAtCursor(sizeTag);
+                }
+
+                function selectColor() {
+                    const color = prompt("Digite o código da cor (ex: #28453a):", "#28453a");
+                    const selectedText = getSelectedText();
+                    const colorTag = `[color=${color}]${selectedText}[/color]`;
+                    insertAtCursor(colorTag);
+                }
+
+                function insertAtCursor(text) {
+                    const textarea = document.getElementById('description');
+                    const start = textarea.selectionStart;
+                    const end = textarea.selectionEnd;
+                    const before = textarea.value.substring(0, start);
+                    const after = textarea.value.substring(end);
+                    textarea.value = `${before}${text}${after}`;
+                    textarea.focus();
+                }
+
+                function getSelectedText() {
+                    const textarea = document.getElementById('description');
+                    return textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+                }
+            </script> <textarea id="fa-generated-message" style="display: none;"></textarea>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script type="text/javascript"
+                src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript"
+                src="https://forumeiros.github.io/assets/src/form-generator/form-replace.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+            <script type="text/javascript">
+                (function ($) {
+                    'use strict';
+
+                    $(window).on('load', function () {
+                        $('form').on('submit', function (event) {
+                            event.preventDefault();
+
+                            // Obter data e hora atual
+                            var now = new Date();
+                            var formattedDate = now.toLocaleDateString('pt-BR');
+                            var formattedTime = now.toLocaleTimeString('pt-BR');
+
+                            // Combinar data e hora em uma única string
+                            var dateTime = formattedDate + ' ' + formattedTime;
+
+                            var data = {
+                                nickname: $('#author').val(),
+                                tipologia: $('#select_options option:selected').text(),
+                                numOrder: $('#order').val(),
+                                description: $('#description').val(),
+                                tema: $('#tema').val(),
+                                dateTime: dateTime
+                            };
+
+                            // Função para marcar o "X" na opção selecionada
+                            function marcarOpcao(opcao) {
+                                return opcao === data.tipologia ? "X" : " ";
+                            }
+
+                            var mensagem = [
+                                '[b]Nick:[/b] ' + data.nickname,
+                                '[b]Número de ordem:[/b] ' + data.numOrder,
+                                '( ' + marcarOpcao('Projeto') + ' ) Projeto  ( ' + marcarOpcao('Sugestão') + ' ) Sugestão  ( ' + marcarOpcao('Correção/Alteração') + ' ) Alteração/Correção',
+                                '[b]Tema:[/b] ' + data.tema,
+                                '[b]Descrição:[/b]',
+                                '',
+                                data.description
+                            ].join('\n');
+
+                            setTimeout(function () {
+                                $.post('/post', {
+                                    t: 33708,
+                                    message: mensagem,
+                                    mode: 'reply',
+                                    tid: $('[name="tid"]:first').val(),
+                                    post: 1,
+                                    attach_sig: 'on'
+                                }).done(function () {
+                                    alert('Postado com sucesso! Aguarde enquanto você está sendo redirecionado...');
+                                    setTimeout(function () {
+                                        location.href =
+                                            "http://" + location.host + "/t33708-?view=newest";
+                                    }, 3000);
+                                }).fail(function () {
+                                    alert('Houve um erro! Tente novamente!');
+                                });
+                            }, 600);
+
+                            function getFormattedDateTime() {
+                                var now = new Date();
+                                var day = String(now.getDate()).padStart(2, "0");
+                                var month = String(now.getMonth() + 1).padStart(2, "0"); // Janeiro é 0
+                                var year = now.getFullYear();
+                                var hours = String(now.getHours()).padStart(2, "0");
+                                var minutes = String(now.getMinutes()).padStart(2, "0");
+                                var seconds = String(now.getSeconds()).padStart(2, "0");
+                                return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+                            }
+
+                            // Salvar os dados na planilha
+                            var sheetData = {
+                                author: document.getElementById("author").value,
+                                order: document.getElementById("order").value,
+                                tema: document.getElementById("tema").value,
+                                description: document.getElementById("description").value,
+                                tipo: document.getElementById("select_options").value,
+                                dateTime: getFormattedDateTime() // Adiciona a data e hora formatadas
+                            };
+
+                            fetch("https://script.google.com/macros/s/AKfycbzHn7bVS5rsCtO9gAcJcKvo1wsxtkiI5NjDX1kROpElSfbuvJplnSafKIWmdRh2f_L_/exec", {
+                                method: "POST",
+                                mode: "no-cors",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify(sheetData)
+                            }).catch(error => {
+                                alert("Erro ao enviar os dados!");
+                                console.error(error);
+                            });
+                        });
+                    });
+                })(jQuery);
+            </script>
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>Desenvolvido por <strong>dIzn</strong> | Repaginado por <strong>???JUKA</strong></p>
+    <p>Todos os direitos reservados à companhia dos instrutores</p>
+</footer> 
+<textarea style="display: none;" id="fa-generated-message"></textarea>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://forumeiros.github.io/assets/src/form-generator/form-replace.js" type="text/javascript"></script>
+<script>
+    const toggleMenu = () => {
+        const toggleBtn = document.getElementById("header-toggle");
+        const nav = document.getElementById("navbar");
+        const content = document.getElementById("text_content");
+        const bd = document.getElementById("body");
+        // Valide se os elementos existem
+        if (toggleBtn && nav) {
+            toggleBtn.addEventListener("click", () => {
+                nav.classList.toggle("show-menu");
+                content.classList.toggle("active");
+                bd.classList.toggle("active_bd");
+                toggleBtn.classList.toggle("bx-x");
+            });
+            document.addEventListener("click", (event) => {
+                // Verifique se o clique foi fora do menu hamburguer
+                if (!nav.contains(event.target) && !toggleBtn.contains(event.target)) {
+                    nav.classList.remove("show-menu");
+                    content.classList.remove("active");
+                    bd.classList.remove("active_bd");
+                    toggleBtn.classList.remove("bx-x");
+                }
+            });
+        }
+    };
+
+    // Chame a função para mostrar/ocultar o menu
+    toggleMenu();
+</script>
